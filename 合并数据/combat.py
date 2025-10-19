@@ -16,13 +16,13 @@ def combat(file1, file2, file3, year):
     merged_df = pd.merge(merged_df, tmp_df, on=['经度', '纬度', '时间步长'], suffixes=('_前', '温度'))
 
     # 保存合并后的数据
-    merged_df.to_csv('merged/merged_data_' + year + '.csv', index=False)
+    merged_df.to_csv('merged/merged_data_' + year + '.csv处理', index=False)
 
 
 years = [f"{i:02d}" for i in range(3, 21)]
 for year in years:
-    file1 = 'deal/deal/save_pre/pre_data_20' + year + '.csv'
-    file2 = 'deal/deal/save_rh/extracted_20' + year + '01_rh_data.csv'
-    file3 = 'deal/deal/save_tmp/tmp_data_20' + year + '.csv'
+    file1 = 'deal/deal/save_pre/pre_data_20' + year + '.csv处理'
+    file2 = 'deal/deal/save_rh/extracted_20' + year + '01_rh_data.csv处理'
+    file3 = 'deal/deal/save_tmp/tmp_data_20' + year + '.csv处理'
 
     combat(file1, file2, file3, year)

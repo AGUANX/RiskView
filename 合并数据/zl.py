@@ -3,7 +3,7 @@ import glob
 
 def delete_year_column():
     # 获取当前目录下所有 CSV 文件
-    csv_files = glob.glob('merged/merged_data_*.csv')
+    csv_files = glob.glob('merged/merged_data_*.csv处理')
 
     for file in csv_files:
         # 读取 CSV 文件

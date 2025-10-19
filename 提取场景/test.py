@@ -24,4 +24,4 @@ for i in range(3):
         # 删除临时列
         merged_df.drop(related_cols, axis=1, inplace=True)
     selected_columns = ['经度', '纬度', '降水量_avg', '相对湿度 (%)_avg', '温度_avg']
-    merged_df[selected_columns].to_csv('场景' + str(i) + '.csv', index=False)
+    merged_df[selected_columns].to_csv('聚类月份' + str(i) + '.csv处理', index=False)

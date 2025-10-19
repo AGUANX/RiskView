@@ -294,7 +294,7 @@ def rotated_calculate(matrix):
 
 # nest_points = ([151, 87], [82, 41], [19, 60], [39, 149], [92, 123])
 #
-# area_id = pd.read_csv('area_id.csv')
+# area_id = pd.read_csv('area_id.csv处理')
 # area_id = area_id.values
 # dem = matrix_divide(area_id, 2, nest_points[2])
 # rotated_calculate(dem)
@@ -304,7 +304,7 @@ def mian():
     columns = ['区域id', '最低能耗', '最佳角度', '返航点']
     df = pd.DataFrame(columns=columns)
     for i in range(1, 187):
-        file_name = '/region_' + str(i) + '_grid' + '.csv'
+        file_name = '/region_' + str(i) + '_grid' + '.csv处理'
         matrix = pd.read_csv(floder + file_name)
         matrix = matrix.to_numpy()
         best_length, max_length, points_step, best_angle = rotated_calculate(matrix)

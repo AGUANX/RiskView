@@ -3,7 +3,7 @@ import os
 
 # 设置包含CSV文件的文件夹路径
 folder_path = '相对湿度/extracted_20'
-back_path = '01_rh_data.csv'  # 替换为你的文件夹路径
+back_path = '01_rh_data.csv处理'  # 替换为你的文件夹路径
 
 
 # 初始化一个空的DataFrame来存储所有经纬度
@@ -25,6 +25,6 @@ for year in years:
 unique_locations = all_locations.drop_duplicates()
 
 # 保存到新的CSV文件
-unique_locations.to_csv('all_unique_locations.csv', index=False)
+unique_locations.to_csv('all_unique_locations.csv处理', index=False)
 
-print(f"提取完成，所有文件的唯一经纬度已保存到 all_unique_locations.csv，共 {len(unique_locations)} 个唯一地点")
+print(f"提取完成，所有文件的唯一经纬度已保存到 all_unique_locations.csv处理，共 {len(unique_locations)} 个唯一地点")

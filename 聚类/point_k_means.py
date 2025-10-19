@@ -14,13 +14,14 @@ plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 years = [f"{i:02d}" for i in range(3, 21)]
 
 dataframes = []
-
+# 读取数据
 for year in years:
-    file1 = 'merged/merged_data_' + year + '.csv'
+    file1 = 'merged/merged_data_' + year + '.csv处理'
     # 创建数据
     data = pd.read_csv(file1)
     dataframes.append(data)
 
+# 合并
 df = pd.concat(dataframes, ignore_index=True)
 
 

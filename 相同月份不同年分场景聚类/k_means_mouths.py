@@ -56,7 +56,7 @@ for month_int in range(1, 13):
     month_df["月份聚类标签"] = final_km.fit_predict(X)
 
     # 5. 保存标签
-    label_file = os.path.join(OUT_DIR, f"月份{month_int}.csv")
+    label_file = os.path.join(OUT_DIR, f"月份{month_int}.csv处理")
     month_df[["年份", "月份聚类标签"]].to_csv(label_file, index=False, encoding="utf-8-sig")
     print(f"[{month_str}] 聚类完成，k={best_k}，结果已保存至 {label_file}")
 

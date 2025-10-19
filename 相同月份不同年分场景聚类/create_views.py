@@ -4,7 +4,7 @@ import pandas as pd
 
 dir = "月份/"
 
-OUTDIR = "场景/月份"
+OUTDIR = "聚类月份/月份"
 
 
 # 读取气象数据
@@ -14,7 +14,7 @@ mouths = [f"{i:02d}" for i in range(1, 13)]
 
 
 for i in mouths:
-    result = pd.read_csv(dir + '月份' + str(int(i)) + '.csv')
+    result = pd.read_csv(dir + '月份' + str(int(i)) + '.csv处理')
     l = 0
     for j in range(result["月份聚类标签"].unique().shape[0]):
         years = result[result["月份聚类标签"] == j]
@@ -40,6 +40,6 @@ for i in mouths:
         selected_columns = ['经度', '纬度', '降水量_avg', '相对湿度 (%)_avg', '温度_avg']
         output_dir = OUTDIR + str(i)
         os.makedirs(output_dir, exist_ok=True)
-        merged_df[selected_columns].to_csv(output_dir + "/" + '场景' + str(l) + '.csv', index=False)
+        merged_df[selected_columns].to_csv(output_dir + "/" + '聚类月份' + str(l) + '.csv处理', index=False)
         l += 1
 

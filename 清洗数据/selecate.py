@@ -6,20 +6,20 @@ import os
 
 # # 设置读取文件路径
 # folder_path = './降雨量加月均温度/pre/extracted_pre_data_20'
-# back_path = '.csv'  # 替换为你的文件夹路径
+# back_path = '.csv处理'  # 替换为你的文件夹路径
 # years = [f"{i:02d}" for i in range(3, 21)]
 #
 # # 保存路径
 # save_path = './save_pre/pre_data_20'
-# save_file = '.csv'
+# save_file = '.csv处理'
 # 设置读取文件路径
 folder_path = '降雨量加月均温度/tmp_normalized/extracted_tmp_data_normalized_20'
-back_path = '.csv'  # 替换为你的文件夹路径
+back_path = '.csv处理'  # 替换为你的文件夹路径
 years = [f"{i:02d}" for i in range(3, 21)]
 
 # 保存路径
 save_path = 'save_tmp/tmp_data_20'
-save_file = '.csv'
+save_file = '.csv处理'
 
 # 要插值的经纬度列表
 points_to_interpolate = pd.read_csv("all_unique_locations.csv")

@@ -232,7 +232,7 @@ def main():
     columns = ['区域id', '最低能耗', '最佳角度']
     df = pd.DataFrame(columns = columns)
     for i in range(1, 187):
-        file_name = '/region_' + str(i) + '_grid' + '.csv'
+        file_name = '/region_' + str(i) + '_grid' + '.csv处理'
         matrix = pd.read_csv(floder + file_name)
         matrix = matrix.to_numpy()
         best_angle, best_length = rotated_calculate(matrix)

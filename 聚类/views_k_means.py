@@ -31,7 +31,7 @@ df['月份聚类标签'] = kmeans.fit_predict(X)
 
 # 输出结果
 print(df[['月份', '月份聚类标签']])
-df[['月份', '月份聚类标签']].to_csv('month_clustering_results.csv', index=False)
+df[['月份', '月份聚类标签']].to_csv('month_clustering_results.csv处理', index=False)
 
 # 可视化聚类结果（降维后可视化）
 from sklearn.decomposition import PCA

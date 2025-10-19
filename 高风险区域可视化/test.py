@@ -10,7 +10,7 @@ plt.rcParams['axes.unicode_minus'] = False  # 正常显示负号
 
 for i in range(3):
     # 读取 CSV 文件
-    file_name = '场景_with_flag' + str(i) + '.csv'  # 替换为你的文件路径
+    file_name = '场景_with_flag' + str(i) + '.csv处理'  # 替换为你的文件路径
     data = pd.read_csv(file_name)
 
     # 创建一个散点图
@@ -25,7 +25,7 @@ for i in range(3):
     )
 
     # 添加图例和标题
-    plt.title('场景' + str(i) + '区域可视化（前30%均值标记为1）')
+    plt.title('聚类月份' + str(i) + '区域可视化（前30%均值标记为1）')
     plt.xlabel('经度')
     plt.ylabel('纬度')
     plt.legend(title='标记', loc='upper right')
